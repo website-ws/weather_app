@@ -1,6 +1,5 @@
 
 //Making variables
-
 const inputBox = document.getElementById('input-box');
 const searchBtn= document.getElementById('search-btn');
 const weather_img = document.getElementById('weather-img');
@@ -10,14 +9,12 @@ const humidity = document.getElementById('humidity');
 const wind_speed = document.getElementById('wind-speed');
 
 const location_not_found = document.getElementById('location-nil');
-
-
 let baseUrl="https://api.openweathermap.org/data/2.5/weather"
 
  async function checkWeather(city){
     const api_key = '79d868e802d08c83534f79e8a0f69ca0';
     const apiUrl = `${baseUrl}?q=${city}&appid=${api_key}`;
-    
+
    try{
     const weather_data = await fetch (`${apiUrl}`).then(response => response.json());
        
